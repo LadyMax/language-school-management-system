@@ -8,7 +8,11 @@ public class Enrollment
 
     public Guid CourseId { get; set; }
 
+    public bool IsActive { get; set; } = true;
+
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+    public DateTime? EndedAt { get; set; }
 
     public User User { get; set; } = null!;
 

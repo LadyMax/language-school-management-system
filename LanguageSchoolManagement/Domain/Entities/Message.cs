@@ -1,3 +1,5 @@
+using LanguageSchoolManagement.Domain.Enums;
+
 namespace LanguageSchoolManagement.Domain.Entities;
 
 public class Message
@@ -12,13 +14,15 @@ public class Message
 
     public string Content { get; set; } = string.Empty;
 
+    /// <summary>AI raw suggestion; keep as string for flexibility.</summary>
     public string? AiSuggestedCategory { get; set; }
 
     public double? AiConfidence { get; set; }
 
-    public string? FinalCategory { get; set; }
+    /// <summary>Admin-confirmed category from fixed set.</summary>
+    public MessageCategory? FinalCategory { get; set; }
 
-    public Guid? ReviewedByAdminId { get; set; }
+    public Guid? ReviewedBy { get; set; }
 
     public DateTime? ReviewedAt { get; set; }
 

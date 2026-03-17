@@ -23,4 +23,8 @@ public class User
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     public StudentProfile? StudentProfile { get; set; }
+
+    public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
+
+    public ICollection<CourseRequest> CourseRequests { get; set; } = new List<CourseRequest>();
 }

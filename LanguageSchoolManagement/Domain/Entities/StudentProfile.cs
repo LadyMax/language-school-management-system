@@ -8,8 +8,6 @@ namespace LanguageSchoolManagement.Domain.Entities;
 /// </summary>
 public class StudentProfile
 {
-    [Key]
-    [ForeignKey(nameof(User))]
     public Guid UserId { get; set; }
 
     public string StudentNumber { get; set; } = string.Empty;
